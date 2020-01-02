@@ -41,104 +41,136 @@
   <div class="col-12 l-days">
     <h4 class="days"><a href="programme/{{ numToStr(dateCur) }}/">{{ numToStr(dateCur) }}</a></h4>
     <div class="row">
+      {% for e in event_list %}
+      {% if e.day == dateCur %}
       <div class="col">
         <div class="row">
-          <h5 class="col-6 offset-3 game-title">Quiz</h5>
+          <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
         </div>
-        <img src="../assets/photos/four_monkeys_ext.jpg" alt="photo" class="game-pic">
-        <p class="game-text">The Four Monkeys - 21h00</p>
+        <img src="static/img/{{ e.location.name }}.png" alt="photo" class="game-pic">
+        <p class="game-text">{{ e.location.name }} - {{ e.time }}</p>
       </div>
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
 
   <div class="col-12 l-days">
     <h4 class="days"><a href="programme/{{ (numToStr(dateCur) + 1) % 7 }}/">{{ (numToStr(dateCur) + 1) % 7 }}</a></h4>
     <div class="row">
-      <div class="col">
-        <div class="row">
-          <h5 class="col-6 offset-3 game-title">Quiz</h5>
+        {% for e in event_list %}
+        {% if e.day == (dateCur + 1) % 7 %}
+        <div class="col">
+          <div class="row">
+            <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
+          </div>
+          <img src="static/img/{{ e.location.name }}.png" alt="photo" class="game-pic">
+          <p class="game-text">{{ e.location.name }} - {{ e.time }}</p>
         </div>
-        <img src="../assets/photos/four_monkeys_ext.jpg" alt="photo" class="game-pic">
-        <p class="game-text">The Four Monkeys - 21h00</p>
-      </div>
+        {% endif %}
+        {% endfor %}
     </div>
   </div>
 
   <div class="col-12 l-days">
     <h4 class="days"><a href="programme/{{ (numToStr(dateCur) + 2) % 7 }}/">{{ (numToStr(dateCur) + 2) % 7 }}</a></h4>
     <div class="row">
-      <div class="col">
-        <div class="row">
-          <h5 class="col-6 offset-3 game-title">Quiz</h5>
+        {% for e in event_list %}
+        {% if e.day == (dateCur + 2) % 7 %}
+        <div class="col">
+          <div class="row">
+            <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
+          </div>
+          <img src="static/img/{{ e.location.name }}.png" alt="photo" class="game-pic">
+          <p class="game-text">{{ e.location.name }} - {{ e.time }}</p>
         </div>
-        <img src="../assets/photos/four_monkeys_ext.jpg" alt="photo" class="game-pic">
-        <p class="game-text">The Four Monkeys - 21h00</p>
-      </div>
+        {% endif %}
+        {% endfor %}
     </div>
   </div>
 
   <div class="col-12 l-days">
     <h4 class="days"><a href="programme/{{ (numToStr(dateCur) + 3) % 7 }}/">{{ (numToStr(dateCur) + 3) % 7 }}</a></h4>
     <div class="row">
-      <div class="col">
-        <div class="row">
-          <h5 class="col-6 offset-3 game-title">Quiz</h5>
+        {% for e in event_list %}
+        {% if e.day == (dateCur + 3) % 7 %}
+        <div class="col">
+          <div class="row">
+            <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
+          </div>
+          <img src="static/img/{{ e.location.name }}.png" alt="photo" class="game-pic">
+          <p class="game-text">{{ e.location.name }} - {{ e.time }}</p>
         </div>
-        <img src="../assets/photos/four_monkeys_ext.jpg" alt="photo" class="game-pic">
-        <p class="game-text">The Four Monkeys - 21h00</p>
-      </div>
+        {% endif %}
+        {% endfor %}
     </div>
   </div>
 
   <div class="col-12 l-days">
     <h4 class="days"><a href="programme/{{ (numToStr(dateCur) + 4) % 7 }}/">{{ (numToStr(dateCur) + 4) % 7 }}</a></h4>
     <div class="row">
-      <div class="col">
-        <div class="row">
-          <h5 class="col-6 offset-3 game-title">Quiz</h5>
+        {% for e in event_list %}
+        {% if e.day == (dateCur + 4) % 7 %}
+        <div class="col">
+          <div class="row">
+            <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
+          </div>
+          <img src="static/img/{{ e.location.name }}.png" alt="photo" class="game-pic">
+          <p class="game-text">{{ e.location.name }} - {{ e.time }}</p>
         </div>
-        <img src="../assets/photos/four_monkeys_ext.jpg" alt="photo" class="game-pic">
-        <p class="game-text">The Four Monkeys - 21h00</p>
-      </div>
+        {% endif %}
+        {% endfor %}
     </div>
   </div>
 
   <div class="col-12 l-days">
     <h4 class="days"><a href="programme/{{ (numToStr(dateCur) + 5) % 7 }}/">{{ (numToStr(dateCur) + 5) % 7 }}</a></h4>
     <div class="row">
-      <div class="col">
-        <div class="row">
-          <h5 class="col-6 offset-3 game-title">Quiz</h5>
+        {% for e in event_list %}
+        {% if e.day == (dateCur + 5) % 7 %}
+        <div class="col">
+          <div class="row">
+            <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
+          </div>
+          <img src="static/img/{{ e.location.name }}.png" alt="photo" class="game-pic">
+          <p class="game-text">{{ e.location.name }} - {{ e.time }}</p>
         </div>
-        <img src="../assets/photos/four_monkeys_ext.jpg" alt="photo" class="game-pic">
-        <p class="game-text">The Four Monkeys - 21h00</p>
-      </div>
+        {% endif %}
+        {% endfor %}
     </div>
   </div>
 
   <div class="col-12 l-days">
     <h4 class="days"><a href="programme/{{ (numToStr(dateCur) + 6) % 7 }}/">{{ (numToStr(dateCur) + 6) % 7 }}</a></h4>
     <div class="row">
-      <div class="col">
-        <div class="row">
-          <h5 class="col-6 offset-3 game-title">Quiz</h5>
+        {% for e in event_list %}
+        {% if e.day == (dateCur + 6) % 7 %}
+        <div class="col">
+          <div class="row">
+            <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
+          </div>
+          <img src="static/img/{{ e.location.name }}.png" alt="photo" class="game-pic">
+          <p class="game-text">{{ e.location.name }} - {{ e.time }}</p>
         </div>
-        <img src="../assets/photos/four_monkeys_ext.jpg" alt="photo" class="game-pic">
-        <p class="game-text">The Four Monkeys - 21h00</p>
-      </div>
+        {% endif %}
+        {% endfor %}
     </div>
   </div>
 
   <div class="col-12 l-days">
     <h4 class="days"><a href="programme/{{ (numToStr(dateCur) + 7) % 7 }}/">{{ (numToStr(dateCur) + 7) % 7 }}</a></h4>
     <div class="row">
-      <div class="col">
-        <div class="row">
-          <h5 class="col-6 offset-3 game-title">Quiz</h5>
+        {% for e in event_list %}
+        {% if e.day == (dateCur + 7) % 7 %}
+        <div class="col">
+          <div class="row">
+            <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
+          </div>
+          <img src="static/img/{{ e.location.name }}.png" alt="photo" class="game-pic">
+          <p class="game-text">{{ e.location.name }} - {{ e.time }}</p>
         </div>
-        <img src="../assets/photos/four_monkeys_ext.jpg" alt="photo" class="game-pic">
-        <p class="game-text">The Four Monkeys - 21h00</p>
-      </div>
+        {% endif %}
+        {% endfor %}
     </div>
   </div>
 
