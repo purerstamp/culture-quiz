@@ -46,7 +46,7 @@
 <body>
 <div class="container-fluid">
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{{ dateCur %}/">{{ dateCur }}</a></h4>
+    <h4 class="days"><a href="programme/{{ dateCur }}/">{{ dateCur }}</a></h4>
     <div class="row">
       {% for e in event_list %}
       {% if e.day == dateCur %}
@@ -66,7 +66,7 @@
     <h4 class="days"><a href="programme/{{ datePlus1 }}/">{{ datePlus1 }}</a></h4>
     <div class="row">
         {% for e in event_list %}
-        {% if e.day == (dateCur + 1) % 7 %}
+        {% if e.day == datePlus1 %}
         <div class="col">
           <div class="row">
             <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
@@ -83,7 +83,7 @@
     <h4 class="days"><a href="programme/{{ datePlus2 }}/">{{ datePlus2 }}</a></h4>
     <div class="row">
         {% for e in event_list %}
-        {% if e.day == (dateCur + 2) % 7 %}
+        {% if e.day == datePlus2 %}
         <div class="col">
           <div class="row">
             <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
@@ -100,7 +100,7 @@
     <h4 class="days"><a href="programme/{{ datePlus3 }}/">{{ datePlus3 }}</a></h4>
     <div class="row">
         {% for e in event_list %}
-        {% if e.day == (dateCur + 3) % 7 %}
+        {% if e.day == datePlus3 %}
         <div class="col">
           <div class="row">
             <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
@@ -117,7 +117,7 @@
     <h4 class="days"><a href="programme/{{ datePlus4 }}/">{{ datePlus4 }}</a></h4>
     <div class="row">
         {% for e in event_list %}
-        {% if e.day == (dateCur + 4) % 7 %}
+        {% if e.day == datePlus4 %}
         <div class="col">
           <div class="row">
             <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
@@ -134,7 +134,7 @@
     <h4 class="days"><a href="programme/{{ datePlus5 }}/">{{ datePlus5 }}</a></h4>
     <div class="row">
         {% for e in event_list %}
-        {% if e.day == (dateCur + 5) % 7 %}
+        {% if e.day == datePlus5 %}
         <div class="col">
           <div class="row">
             <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
@@ -151,7 +151,7 @@
     <h4 class="days"><a href="programme/{{ datePlus6 }}/">{{ datePlus6 }}</a></h4>
     <div class="row">
         {% for e in event_list %}
-        {% if e.day == (dateCur + 6) % 7 %}
+        {% if e.day == datePlus6 %}
         <div class="col">
           <div class="row">
             <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
@@ -168,7 +168,7 @@
     <h4 class="days"><a href="programme/{{ datePlus7 }}/">{{ datePlus7 }}</a></h4>
     <div class="row">
         {% for e in event_list %}
-        {% if e.day == (dateCur + 7) % 7 %}
+        {% if e.day == datePlus7 %}
         <div class="col">
           <div class="row">
             <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
