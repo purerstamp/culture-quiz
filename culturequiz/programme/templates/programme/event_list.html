@@ -26,7 +26,14 @@
   def numToStr(num):
     func = switcher.get(num, "Error while getting current day.")
     return func()
-  dateCur = date.today().weekday()
+  dateCur = numToStr(date.today().weekday())
+  datePlus1 = numToStr((date.today().weekday() + 1) % 7)
+  datePlus2 = numToStr((date.today().weekday() + 2) % 7)
+  datePlus3 = numToStr((date.today().weekday() + 3) % 7)
+  datePlus4 = numToStr((date.today().weekday() + 4) % 7)
+  datePlus5 = numToStr((date.today().weekday() + 5) % 7)
+  datePlus6 = numToStr((date.today().weekday() + 6) % 7)
+  datePlus7 = numToStr((date.today().weekday() + 7) % 7)
 %}
 <!DOCTYPE html>
 <html>
@@ -39,7 +46,7 @@
 <body>
 <div class="container-fluid">
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{% numToStr(dateCur) %}/">{% numToStr(dateCur) %}</a></h4>
+    <h4 class="days"><a href="programme/{{ dateCur %}/">{{ dateCur }}</a></h4>
     <div class="row">
       {% for e in event_list %}
       {% if e.day == dateCur %}
@@ -56,7 +63,7 @@
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{% (numToStr(dateCur) + 1) % 7 %}/">{% (numToStr(dateCur) + 1) % 7 %}</a></h4>
+    <h4 class="days"><a href="programme/{{ datePlus1 }}/">{{ datePlus1 }}</a></h4>
     <div class="row">
         {% for e in event_list %}
         {% if e.day == (dateCur + 1) % 7 %}
@@ -73,7 +80,7 @@
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{% (numToStr(dateCur) + 2) % 7 %}/">{% (numToStr(dateCur) + 2) % 7 %}</a></h4>
+    <h4 class="days"><a href="programme/{{ datePlus2 }}/">{{ datePlus2 }}</a></h4>
     <div class="row">
         {% for e in event_list %}
         {% if e.day == (dateCur + 2) % 7 %}
@@ -90,7 +97,7 @@
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{% (numToStr(dateCur) + 3) % 7 %}/">{% (numToStr(dateCur) + 3) % 7 %}</a></h4>
+    <h4 class="days"><a href="programme/{{ datePlus3 }}/">{{ datePlus3 }}</a></h4>
     <div class="row">
         {% for e in event_list %}
         {% if e.day == (dateCur + 3) % 7 %}
@@ -107,7 +114,7 @@
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{% (numToStr(dateCur) + 4) % 7 %}/">{% (numToStr(dateCur) + 4) % 7 %}</a></h4>
+    <h4 class="days"><a href="programme/{{ datePlus4 }}/">{{ datePlus4 }}</a></h4>
     <div class="row">
         {% for e in event_list %}
         {% if e.day == (dateCur + 4) % 7 %}
@@ -124,7 +131,7 @@
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{% (numToStr(dateCur) + 5) % 7 %}/">{% (numToStr(dateCur) + 5) % 7 %}</a></h4>
+    <h4 class="days"><a href="programme/{{ datePlus5 }}/">{{ datePlus5 }}</a></h4>
     <div class="row">
         {% for e in event_list %}
         {% if e.day == (dateCur + 5) % 7 %}
@@ -141,7 +148,7 @@
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{% (numToStr(dateCur) + 6) % 7 %}/">{% (numToStr(dateCur) + 6) % 7 %}</a></h4>
+    <h4 class="days"><a href="programme/{{ datePlus6 }}/">{{ datePlus6 }}</a></h4>
     <div class="row">
         {% for e in event_list %}
         {% if e.day == (dateCur + 6) % 7 %}
@@ -158,7 +165,7 @@
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{% (numToStr(dateCur) + 7) % 7 %}/">{% (numToStr(dateCur) + 7) % 7 %}</a></h4>
+    <h4 class="days"><a href="programme/{{ datePlus7 }}/">{{ datePlus7 }}</a></h4>
     <div class="row">
         {% for e in event_list %}
         {% if e.day == (dateCur + 7) % 7 %}
