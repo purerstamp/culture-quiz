@@ -39,7 +39,7 @@
 <body>
 <div class="container-fluid">
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{{ numToStr(dateCur) }}/">{{ numToStr(dateCur) }}</a></h4>
+    <h4 class="days"><a href="programme/{% numToStr(dateCur) %}/">{% numToStr(dateCur) %}</a></h4>
     <div class="row">
       {% for e in event_list %}
       {% if e.day == dateCur %}
@@ -56,7 +56,7 @@
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{{ (numToStr(dateCur) + 1) % 7 }}/">{{ (numToStr(dateCur) + 1) % 7 }}</a></h4>
+    <h4 class="days"><a href="programme/{% (numToStr(dateCur) + 1) % 7 %}/">{% (numToStr(dateCur) + 1) % 7 %}</a></h4>
     <div class="row">
         {% for e in event_list %}
         {% if e.day == (dateCur + 1) % 7 %}
@@ -73,7 +73,7 @@
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{{ (numToStr(dateCur) + 2) % 7 }}/">{{ (numToStr(dateCur) + 2) % 7 }}</a></h4>
+    <h4 class="days"><a href="programme/{% (numToStr(dateCur) + 2) % 7 %}/">{% (numToStr(dateCur) + 2) % 7 %}</a></h4>
     <div class="row">
         {% for e in event_list %}
         {% if e.day == (dateCur + 2) % 7 %}
@@ -90,7 +90,7 @@
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{{ (numToStr(dateCur) + 3) % 7 }}/">{{ (numToStr(dateCur) + 3) % 7 }}</a></h4>
+    <h4 class="days"><a href="programme/{% (numToStr(dateCur) + 3) % 7 %}/">{% (numToStr(dateCur) + 3) % 7 %}</a></h4>
     <div class="row">
         {% for e in event_list %}
         {% if e.day == (dateCur + 3) % 7 %}
@@ -107,7 +107,7 @@
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{{ (numToStr(dateCur) + 4) % 7 }}/">{{ (numToStr(dateCur) + 4) % 7 }}</a></h4>
+    <h4 class="days"><a href="programme/{% (numToStr(dateCur) + 4) % 7 %}/">{% (numToStr(dateCur) + 4) % 7 %}</a></h4>
     <div class="row">
         {% for e in event_list %}
         {% if e.day == (dateCur + 4) % 7 %}
@@ -124,7 +124,7 @@
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{{ (numToStr(dateCur) + 5) % 7 }}/">{{ (numToStr(dateCur) + 5) % 7 }}</a></h4>
+    <h4 class="days"><a href="programme/{% (numToStr(dateCur) + 5) % 7 %}/">{% (numToStr(dateCur) + 5) % 7 %}</a></h4>
     <div class="row">
         {% for e in event_list %}
         {% if e.day == (dateCur + 5) % 7 %}
@@ -141,7 +141,7 @@
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{{ (numToStr(dateCur) + 6) % 7 }}/">{{ (numToStr(dateCur) + 6) % 7 }}</a></h4>
+    <h4 class="days"><a href="programme/{% (numToStr(dateCur) + 6) % 7 %}/">{% (numToStr(dateCur) + 6) % 7 %}</a></h4>
     <div class="row">
         {% for e in event_list %}
         {% if e.day == (dateCur + 6) % 7 %}
@@ -158,7 +158,7 @@
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/{{ (numToStr(dateCur) + 7) % 7 }}/">{{ (numToStr(dateCur) + 7) % 7 }}</a></h4>
+    <h4 class="days"><a href="programme/{% (numToStr(dateCur) + 7) % 7 %}/">{% (numToStr(dateCur) + 7) % 7 %}</a></h4>
     <div class="row">
         {% for e in event_list %}
         {% if e.day == (dateCur + 7) % 7 %}
