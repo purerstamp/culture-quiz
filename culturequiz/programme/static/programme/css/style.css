@@ -1,0 +1,31 @@
+/*
+* Stylesheet for: programme app.
+* @purerstamp
+* GPLv3
+* v0.0
+*/
+@font-face {
+    font-family: "Hipsterish";
+    src: url("../fonts/HipsterishFontNormal.ttf");
+}
+
+header {
+    background: #3a3a3a url(../img/logo.png) fixed no-repeat top left;
+    padding: 5px;
+}
+h1, h2 {
+    text-align: center;
+}
+h1 {
+    margin: ;
+}
+h1 img {
+    width: 40%;
+}
+h2 {
+    font-family: "Hipsterish";
+    color: white;
+}
+h4 {
+    font-family: "Hipsterish";
+}

@@ -3,10 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="author" content="culturequiz dev team" lang="fr" />
-  <link rel="stylesheet" type="text/css" href="static/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/programme/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/programme/css/style.css" />
   <title>Culture Quiz Toulouse | Bienvenue</title>
 </head>
 <body>
+<header>
+  <h1><img src="../../static/programme/img/banner.png" /></h1>
+  <h2>A la recherche du meilleur quiz / blind-test</h2>
+</header>
 <div class="container-fluid">
   <div class="col-12 l-days">
     <h4 class="days"><a href="programme/lundi/">Lundi</a></h4>
@@ -26,7 +31,7 @@
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/mardi/">{{ Mardi }}</a></h4>
+    <h4 class="days"><a href="programme/mardi/">Mardi</a></h4>
     <div class="row">
         {% for e in event_list %}
         {% if e.day == mardi %}
