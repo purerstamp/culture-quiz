@@ -3,21 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="author" content="culturequiz dev team" lang="fr" />
-  <link rel="stylesheet" type="text/css" href="../../static/programme/css/reset.css" />
-  <link rel="stylesheet" type="text/css" href="../../static/programme/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/schedule/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="../../static/schedule/css/style.css" />
   <title>Culture Quiz Toulouse | Bienvenue</title>
 </head>
 <body>
 <header>
-  <h1><img src="../../static/programme/img/banner.png" /></h1>
+  <h1><img src="../../static/schedule/img/banner.png" /></h1>
   <h2>A la recherche du meilleur quiz / blind-test</h2>
 </header>
 <div class="container-fluid">
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/lundi/">Lundi</a></h4>
+    <h4 class="days"><a href="schedule/lundi/">Lundi</a></h4>
     <div class="row">
-      {% for e in event_list %}
-      {% if e.day == lundi %}
+      {% for e in event_mon_list %}
       <div class="col">
         <div class="row">
           <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
@@ -25,16 +24,14 @@
         <img src="static/img/{{ e.location.name }}.png" alt="photo" class="game-pic">
         <p class="game-text">{{ e.location.name }} - {{ e.time }}</p>
       </div>
-      {% endif %}
       {% endfor %}
     </div>
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/mardi/">Mardi</a></h4>
+    <h4 class="days"><a href="schedule/mardi/">Mardi</a></h4>
     <div class="row">
-        {% for e in event_list %}
-        {% if e.day == mardi %}
+        {% for e in event_tue_list %}
         <div class="col">
           <div class="row">
             <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
@@ -42,16 +39,14 @@
           <img src="static/img/{{ e.location.name }}.png" alt="photo" class="game-pic">
           <p class="game-text">{{ e.location.name }} - {{ e.time }}</p>
         </div>
-        {% endif %}
         {% endfor %}
     </div>
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/mercredi/">Mercredi</a></h4>
+    <h4 class="days"><a href="schedule/mercredi/">Mercredi</a></h4>
     <div class="row">
-        {% for e in event_list %}
-        {% if e.day == datePlus2 %}
+        {% for e in event_wed_list %}
         <div class="col">
           <div class="row">
             <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
@@ -59,16 +54,14 @@
           <img src="static/img/{{ e.location.name }}.png" alt="photo" class="game-pic">
           <p class="game-text">{{ e.location.name }} - {{ e.time }}</p>
         </div>
-        {% endif %}
         {% endfor %}
     </div>
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/jeudi/">Jeudi</a></h4>
+    <h4 class="days"><a href="schedule/jeudi/">Jeudi</a></h4>
     <div class="row">
-        {% for e in event_list %}
-        {% if e.day == datePlus3 %}
+        {% for e in event_thu_list %}
         <div class="col">
           <div class="row">
             <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
@@ -76,16 +69,14 @@
           <img src="static/img/{{ e.location.name }}.png" alt="photo" class="game-pic">
           <p class="game-text">{{ e.location.name }} - {{ e.time }}</p>
         </div>
-        {% endif %}
         {% endfor %}
     </div>
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/vendredi/">Vendredi</a></h4>
+    <h4 class="days"><a href="schedule/vendredi/">Vendredi</a></h4>
     <div class="row">
-        {% for e in event_list %}
-        {% if e.day == datePlus4 %}
+        {% for e in event_fri_list %}
         <div class="col">
           <div class="row">
             <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
@@ -93,16 +84,14 @@
           <img src="static/img/{{ e.location.name }}.png" alt="photo" class="game-pic">
           <p class="game-text">{{ e.location.name }} - {{ e.time }}</p>
         </div>
-        {% endif %}
         {% endfor %}
     </div>
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/samedi/">Samedi</a></h4>
+    <h4 class="days"><a href="schedule/samedi/">Samedi</a></h4>
     <div class="row">
-        {% for e in event_list %}
-        {% if e.day == datePlus5 %}
+        {% for e in event_sat_list %}
         <div class="col">
           <div class="row">
             <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
@@ -110,16 +99,14 @@
           <img src="static/img/{{ e.location.name }}.png" alt="photo" class="game-pic">
           <p class="game-text">{{ e.location.name }} - {{ e.time }}</p>
         </div>
-        {% endif %}
         {% endfor %}
     </div>
   </div>
 
   <div class="col-12 l-days">
-    <h4 class="days"><a href="programme/dimanche/">Dimanche</a></h4>
+    <h4 class="days"><a href="schedule/dimanche/">Dimanche</a></h4>
     <div class="row">
-        {% for e in event_list %}
-        {% if e.day == datePlus6 %}
+        {% for e in event_sun_list %}
         <div class="col">
           <div class="row">
             <h5 class="col-6 offset-3 game-title">{{ e.type }}</h5>
@@ -127,7 +114,6 @@
           <img src="static/img/{{ e.location.name }}.png" alt="photo" class="game-pic">
           <p class="game-text">{{ e.location.name }} - {{ e.time }}</p>
         </div>
-        {% endif %}
         {% endfor %}
     </div>
   </div>
