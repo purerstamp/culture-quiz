@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
                 ('type', models.CharField(max_length=50)),
                 ('day', models.CharField(max_length=8)),
                 ('time', models.CharField(max_length=5)),
-                ('location', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='programme.Bar')),
+                ('location', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='schedule.Bar')),
             ],
         ),
     ]
